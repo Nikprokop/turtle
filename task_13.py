@@ -1,0 +1,56 @@
+import turtle
+import math
+turtle.speed(5)
+turtle.shape("turtle")
+def circ1(R):
+    a = 2 * R * math.sin(math.pi/360)
+    for i in range(360):
+        turtle.forward(a)
+        turtle.left(1)
+def circ2(R):
+    a = 2 * R * math.sin(math.pi/360)
+    for i in range(360):
+        turtle.forward(a)
+        turtle.right(1)
+
+def duga(R):
+    a = 2 * R * math.sin(math.pi/360)
+    for i in range(180):
+        turtle.forward(a)
+        turtle.right(1)
+
+D = int(input())
+turtle.penup()
+turtle.forward(D)
+turtle.pendown()
+turtle.left(90)
+turtle.color("black", "yellow")
+turtle.begin_fill()
+circ1(D)
+turtle.end_fill()
+turtle.penup()
+turtle.goto(-D/4,D/2)
+turtle.pendown()
+turtle.color("black", "blue")
+turtle.begin_fill()
+circ1(D/8)
+turtle.end_fill()
+turtle.penup()
+turtle.goto(D/4,D/2)
+turtle.pendown()
+turtle.color("black", "blue")
+turtle.begin_fill()
+circ2(D/8)
+turtle.end_fill()
+turtle.penup()
+turtle.goto(0,D/4)
+turtle.width(4)
+turtle.pendown()
+turtle.backward(3*D/8)
+turtle.penup()
+turtle.goto(4*D/8,-D/4)
+turtle.left(180)
+turtle.pendown()
+turtle.width(8)
+turtle.color("red")
+duga(4*D/8)

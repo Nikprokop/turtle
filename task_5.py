@@ -1,0 +1,26 @@
+import turtle
+
+turtle.shape('turtle')
+n = int(input())
+turtle.penup()
+turtle.right(90)
+turtle.forward(n/2)
+turtle.right(90)
+turtle.forward(n/2)
+turtle.right(180)
+turtle.pendown()
+for i in range(10):
+    turtle.pendown()
+    turtle.forward(n)
+    turtle.left(90)
+    turtle.forward(n)
+    turtle.left(90)
+    turtle.forward(n)
+    turtle.left(90)
+    turtle.forward(n)
+    turtle.penup()
+    turtle.forward(5)
+    turtle.right(90)
+    turtle.forward(5)
+    turtle.left(180)
+    n +=10
